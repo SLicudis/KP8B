@@ -9,4 +9,11 @@ Supported by (discord usernames):
 @nioquis4321 (Ñoquis)                                                                                                         
 @protouncreative (Seb)                                                                                                        
 @cane4123123 (Cane)                                                                                                           
-@nioruff (Nioruff)
+@nioruff (Nioruff)                                                                                                            
+
+Mapping of the computer used as an example:                                                                                   
+FFFB: Dip switch                                                                                                              
+FFFC: Hex-Binary display (low)                                                                                                
+FFFD: Hex-Binary display (high)                                                                                               
+FFFE: Terminal                                                                                                                
+FFFF: Keyboard
