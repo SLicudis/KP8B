@@ -153,7 +153,7 @@
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
     </comp>
-    <comp lib="0" loc="(1220,940)" name="Tunnel">
+    <comp lib="0" loc="(1240,940)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="sL"/>
     </comp>
@@ -174,7 +174,7 @@
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
     </comp>
-    <comp lib="0" loc="(1280,940)" name="Tunnel">
+    <comp lib="0" loc="(1300,940)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="sH"/>
     </comp>
@@ -218,7 +218,7 @@
       <a name="label" val="DATA"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(1800,750)" name="Tunnel">
+    <comp lib="0" loc="(1820,750)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="CLK"/>
     </comp>
@@ -239,11 +239,11 @@
       <a name="fanout" val="1"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(1900,770)" name="Tunnel">
+    <comp lib="0" loc="(1920,770)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="TERMINAL"/>
     </comp>
-    <comp lib="0" loc="(1940,810)" name="Tunnel">
+    <comp lib="0" loc="(1930,810)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="CLK"/>
     </comp>
@@ -416,14 +416,14 @@
       <a name="negate2" val="true"/>
       <a name="size" val="30"/>
     </comp>
-    <comp lib="1" loc="(1310,700)" name="PLA">
+    <comp lib="1" loc="(1310,670)" name="PLA">
       <a name="facing" val="south"/>
       <a name="in_width" val="16"/>
       <a name="out_width" val="5"/>
       <a name="table">1111111111111110 10010 # TERMINAL
 1111111111111111 10011 # KEYBOARD
-1111111111111101 10100 # HEX-LOW
-1111111111111100 10101 # HEX-HIGH
+1111111111111100 10100 # HEX-LOW
+1111111111111101 10101 # HEX-HIGH
 1111111111111011 10110 # Binary In
 </a>
     </comp>
@@ -448,8 +448,10 @@
       <a name="addrWidth" val="15"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 15 8
-90 0 6 0 0 0 f8 ff
-ff f0 ff fe 90 0 6
+90 0 6 0 0 0 40 10
+ff 40 20 0 40 30 0 30
+22 1 31 33 0 60 21 fc
+60 31 fd 90 0 f
 </a>
     </comp>
     <comp lib="4" loc="(1450,750)" name="RAM">
@@ -538,9 +540,11 @@ ff f0 ff fe 90 0 6
     <wire from="(1220,840)" to="(1280,840)"/>
     <wire from="(1220,870)" to="(1220,880)"/>
     <wire from="(1220,880)" to="(1230,880)"/>
-    <wire from="(1220,920)" to="(1220,940)"/>
+    <wire from="(1220,920)" to="(1220,930)"/>
+    <wire from="(1220,930)" to="(1240,930)"/>
     <wire from="(1230,870)" to="(1240,870)"/>
     <wire from="(1240,870)" to="(1240,880)"/>
+    <wire from="(1240,930)" to="(1240,940)"/>
     <wire from="(1260,860)" to="(1260,880)"/>
     <wire from="(1270,860)" to="(1270,890)"/>
     <wire from="(1280,540)" to="(1310,540)"/>
@@ -550,14 +554,17 @@ ff f0 ff fe 90 0 6
     <wire from="(1280,790)" to="(1380,790)"/>
     <wire from="(1280,860)" to="(1280,870)"/>
     <wire from="(1280,870)" to="(1290,870)"/>
-    <wire from="(1280,920)" to="(1280,940)"/>
+    <wire from="(1280,920)" to="(1280,930)"/>
+    <wire from="(1280,930)" to="(1300,930)"/>
     <wire from="(1290,860)" to="(1300,860)"/>
     <wire from="(1290,870)" to="(1290,880)"/>
     <wire from="(1300,770)" to="(1300,820)"/>
     <wire from="(1300,820)" to="(1320,820)"/>
     <wire from="(1300,860)" to="(1300,890)"/>
-    <wire from="(1310,540)" to="(1310,700)"/>
+    <wire from="(1300,930)" to="(1300,940)"/>
+    <wire from="(1310,540)" to="(1310,670)"/>
     <wire from="(1310,540)" to="(1360,540)"/>
+    <wire from="(1310,720)" to="(1310,750)"/>
     <wire from="(1310,770)" to="(1310,810)"/>
     <wire from="(1340,820)" to="(1350,820)"/>
     <wire from="(1350,810)" to="(1350,820)"/>
@@ -590,14 +597,14 @@ ff f0 ff fe 90 0 6
     <wire from="(1690,840)" to="(1710,840)"/>
     <wire from="(1710,840)" to="(1710,1010)"/>
     <wire from="(1720,580)" to="(1720,1020)"/>
-    <wire from="(1800,750)" to="(1920,750)"/>
+    <wire from="(1820,750)" to="(1920,750)"/>
     <wire from="(1890,730)" to="(1900,730)"/>
-    <wire from="(1900,770)" to="(1950,770)"/>
     <wire from="(1920,730)" to="(1940,730)"/>
     <wire from="(1920,740)" to="(1920,750)"/>
     <wire from="(1920,740)" to="(1940,740)"/>
-    <wire from="(1940,780)" to="(1940,810)"/>
-    <wire from="(1940,780)" to="(1990,780)"/>
+    <wire from="(1920,770)" to="(1950,770)"/>
+    <wire from="(1930,780)" to="(1930,810)"/>
+    <wire from="(1930,780)" to="(1990,780)"/>
     <wire from="(1950,750)" to="(1950,770)"/>
     <wire from="(1960,530)" to="(1970,530)"/>
     <wire from="(1970,530)" to="(1970,610)"/>
@@ -1817,7 +1824,7 @@ ff f0 ff fe 90 0 6
     <a name="circuit" val="KP8B"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="downloadFrequency" val="255102.04081632654"/>
-    <a name="simulationFrequency" val="256000.0"/>
+    <a name="simulationFrequency" val="16.0"/>
     <comp lib="0" loc="(1030,1080)" name="Splitter">
       <a name="appear" val="center"/>
       <a name="facing" val="west"/>
@@ -2888,9 +2895,9 @@ x1101x101 00001010011000000000 # RET
 x1101x110 01110000000000100000 # RET
 x1101x111 00001100000000001000 # RET
 x0001x011 00001010110001000000 # BRK
-x0001x100 01110000000000100000 # BRK
+x0001x100 10110000000000100000 # BRK
 x0001x101 00001010110001000000 # BRK
-x0001x110 01110000000000100000 # BRK
+x0001x110 10110000000000100000 # BRK
 x0001x111 00001110000000001000 # BRK
 </a>
     </comp>
