@@ -27,6 +27,9 @@
     <tool name="Tunnel">
       <a name="facing" val="north"/>
     </tool>
+    <tool name="Constant">
+      <a name="value" val="0x0"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1">
     <tool name="XNOR Gate">
@@ -1598,18 +1601,6 @@ ff fe 90 0 9
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(1350,250)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="Cout"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(1350,280)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="Bout"/>
-      <a name="output" val="true"/>
-    </comp>
     <comp lib="0" loc="(1350,320)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -1622,10 +1613,28 @@ ff fe 90 0 9
       <a name="label" val="Sign"/>
       <a name="output" val="true"/>
     </comp>
+    <comp lib="0" loc="(1360,300)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(1380,300)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="NulFlag"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp lib="0" loc="(1420,190)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="Z"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(1460,240)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(1540,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Cout"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(740,110)" name="Pin">
@@ -1660,6 +1669,15 @@ ff fe 90 0 9
       <a name="fanout" val="1"/>
       <a name="incoming" val="8"/>
     </comp>
+    <comp lib="1" loc="(1150,730)" name="PLA">
+      <a name="in_width" val="4"/>
+      <a name="out_width" val="1"/>
+      <a name="table">0000 1 # add
+0001 1 # addc
+0010 1 # sub
+0011 1 # subc
+</a>
+    </comp>
     <comp lib="1" loc="(1230,600)" name="NOR Gate">
       <a name="size" val="30"/>
     </comp>
@@ -1673,6 +1691,9 @@ ff fe 90 0 9
     </comp>
     <comp lib="1" loc="(1290,440)" name="OR Gate">
       <a name="inputs" val="8"/>
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(1300,260)" name="OR Gate">
       <a name="size" val="30"/>
     </comp>
     <comp lib="1" loc="(1400,190)" name="NOR Gate">
@@ -1711,6 +1732,7 @@ ff fe 90 0 9
       <a name="enable" val="true"/>
       <a name="select" val="2"/>
     </comp>
+    <comp lib="2" loc="(1520,250)" name="Multiplexer"/>
     <comp lib="3" loc="(900,120)" name="Adder"/>
     <comp lib="3" loc="(900,190)" name="Subtractor"/>
     <comp lib="3" loc="(900,260)" name="Multiplier"/>
@@ -1759,8 +1781,10 @@ ff fe 90 0 9
     <wire from="(1130,540)" to="(1170,540)"/>
     <wire from="(1130,600)" to="(1130,650)"/>
     <wire from="(1130,600)" to="(1150,600)"/>
-    <wire from="(1130,650)" to="(1130,870)"/>
+    <wire from="(1130,650)" to="(1130,730)"/>
     <wire from="(1130,650)" to="(1150,650)"/>
+    <wire from="(1130,730)" to="(1130,870)"/>
+    <wire from="(1130,730)" to="(1150,730)"/>
     <wire from="(1150,200)" to="(1180,200)"/>
     <wire from="(1170,590)" to="(1190,590)"/>
     <wire from="(1170,600)" to="(1180,600)"/>
@@ -1777,8 +1801,9 @@ ff fe 90 0 9
     <wire from="(1190,320)" to="(1190,390)"/>
     <wire from="(1190,390)" to="(1200,390)"/>
     <wire from="(1190,540)" to="(1310,540)"/>
+    <wire from="(1200,730)" to="(1500,730)"/>
     <wire from="(1220,250)" to="(1220,300)"/>
-    <wire from="(1220,250)" to="(1350,250)"/>
+    <wire from="(1220,250)" to="(1270,250)"/>
     <wire from="(1220,300)" to="(1290,300)"/>
     <wire from="(1220,400)" to="(1260,400)"/>
     <wire from="(1220,410)" to="(1260,410)"/>
@@ -1789,8 +1814,8 @@ ff fe 90 0 9
     <wire from="(1220,460)" to="(1230,460)"/>
     <wire from="(1220,470)" to="(1220,480)"/>
     <wire from="(1220,480)" to="(1260,480)"/>
-    <wire from="(1230,280)" to="(1230,310)"/>
-    <wire from="(1230,280)" to="(1350,280)"/>
+    <wire from="(1230,270)" to="(1230,310)"/>
+    <wire from="(1230,270)" to="(1270,270)"/>
     <wire from="(1230,310)" to="(1290,310)"/>
     <wire from="(1230,460)" to="(1230,470)"/>
     <wire from="(1230,470)" to="(1260,470)"/>
@@ -1811,6 +1836,7 @@ ff fe 90 0 9
     <wire from="(1270,380)" to="(1300,380)"/>
     <wire from="(1280,610)" to="(1320,610)"/>
     <wire from="(1290,440)" to="(1300,440)"/>
+    <wire from="(1300,260)" to="(1490,260)"/>
     <wire from="(1300,380)" to="(1300,440)"/>
     <wire from="(1310,340)" to="(1310,540)"/>
     <wire from="(1320,150)" to="(1320,160)"/>
@@ -1830,7 +1856,11 @@ ff fe 90 0 9
     <wire from="(1340,170)" to="(1360,170)"/>
     <wire from="(1350,180)" to="(1350,190)"/>
     <wire from="(1350,180)" to="(1360,180)"/>
+    <wire from="(1360,300)" to="(1380,300)"/>
     <wire from="(1400,190)" to="(1420,190)"/>
+    <wire from="(1460,240)" to="(1490,240)"/>
+    <wire from="(1500,270)" to="(1500,730)"/>
+    <wire from="(1520,250)" to="(1540,250)"/>
     <wire from="(740,110)" to="(840,110)"/>
     <wire from="(740,130)" to="(830,130)"/>
     <wire from="(740,160)" to="(790,160)"/>
