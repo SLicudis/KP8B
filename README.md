@@ -12,7 +12,12 @@ Supported by (discord usernames):
 @nioruff (Nioruff)                                                                                                            
 
 Mapping of the computer used as an example:                                                                                   
-FFF3-FFFA: Matrix display
+FFF3: Pixel position (display)                                                                                               
+FFF4: Color in (display)  [Clear in fetching mode]                             
+
+FFF5-FFF7: Storage address                                                                                                   
+FFF8: Storage data
+
 FFFB: Dip switch                                                                                                              
 FFFC: Hex-Binary display (low)                                                                                                
 FFFD: Hex-Binary display (high)                                                                                               
