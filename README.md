@@ -12,8 +12,9 @@ Supported by (discord usernames):
 @nioruff (Nioruff)                                                                                                            
 
 Mapping of the computer used as an example:                                                                                   
+FFF3-FFFA: Matrix display
 FFFB: Dip switch                                                                                                              
 FFFC: Hex-Binary display (low)                                                                                                
 FFFD: Hex-Binary display (high)                                                                                               
 FFFE: Terminal                                                                                                                
-FFFF: Keyboard
+FFFF: Keyboard 
