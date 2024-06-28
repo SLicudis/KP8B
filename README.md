@@ -11,7 +11,7 @@ Supported by (discord usernames):
 @cane4123123 (Cane)                                                                                                           
 @nioruff (Nioruff)                                                                                                            
 
-Mapping of the computer used as an example:                                                                                   
+Mapping of the computer used as an example: (KP8B file, not KP8B_CPU)                                                                                   
 FFF3: Pixel position (display)                                                                                               
 FFF4: Color in (display)  [Clear in fetching mode]                             
 
