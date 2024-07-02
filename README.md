@@ -6,9 +6,9 @@ ISA: https://docs.google.com/spreadsheets/d/1Fsal-7lGGJrTdmGC1KN0GybIsEcmk3nlsvM
 Assembler: https://github.com/ProtoSebastian/newcpu <br />
 
 Supported by (discord usernames): <br />
-@lorddecapo (Lord Decapo) <br />
-@nioquis4321 (Ñoquis) [Making the simulator] <br />
 @protouncreative (Seb) [Creator of the assembler] <br />
+@nioquis4321 (Ñoquis) [Making the simulator] <br />
+@lorddecapo (Lord Decapo) <br />
 @cane4123123 (Cane) <br />
 @nioruff (Nioruff) <br />
 
