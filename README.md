@@ -6,8 +6,8 @@ ISA: https://docs.google.com/spreadsheets/d/1Fsal-7lGGJrTdmGC1KN0GybIsEcmk3nlsvM
 
 Supported by (discord usernames):           
 @lorddecapo (Lord Decapo)                                                                                                    
-@nioquis4321 (Ñoquis)                                                                                                         
-@protouncreative (Seb)                                                                                                        
+@nioquis4321 (Ñoquis) [Making the simulator]                                                                                                        
+@protouncreative (Seb) [Creator of the assembler]                                                                                                       
 @cane4123123 (Cane)                                                                                                           
 @nioruff (Nioruff)                                                                                                            
 
