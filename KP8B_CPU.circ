@@ -1043,10 +1043,6 @@
       <a name="label" val="OP"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(770,690)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
     <comp lib="0" loc="(870,640)" name="Splitter">
       <a name="appear" val="center"/>
       <a name="bit0" val="2"/>
@@ -1472,7 +1468,6 @@
     <wire from="(740,200)" to="(750,200)"/>
     <wire from="(750,80)" to="(750,200)"/>
     <wire from="(750,80)" to="(880,80)"/>
-    <wire from="(770,690)" to="(880,690)"/>
     <wire from="(790,160)" to="(790,330)"/>
     <wire from="(790,330)" to="(790,800)"/>
     <wire from="(790,800)" to="(1310,800)"/>
@@ -1520,8 +1515,10 @@
     <wire from="(840,530)" to="(860,530)"/>
     <wire from="(840,600)" to="(840,640)"/>
     <wire from="(840,600)" to="(880,600)"/>
-    <wire from="(840,640)" to="(840,720)"/>
+    <wire from="(840,640)" to="(840,690)"/>
     <wire from="(840,640)" to="(870,640)"/>
+    <wire from="(840,690)" to="(840,720)"/>
+    <wire from="(840,690)" to="(880,690)"/>
     <wire from="(840,720)" to="(840,760)"/>
     <wire from="(840,720)" to="(880,720)"/>
     <wire from="(840,760)" to="(860,760)"/>
@@ -3200,8 +3197,7 @@ x0001x111 00001110000000001000 # BRK
     <wire from="(2230,670)" to="(2250,670)"/>
     <wire from="(2240,690)" to="(2240,770)"/>
     <wire from="(2240,690)" to="(2250,690)"/>
-    <wire from="(2250,710)" to="(2250,730)"/>
-    <wire from="(2250,730)" to="(2250,780)"/>
+    <wire from="(2250,710)" to="(2250,780)"/>
     <wire from="(2250,960)" to="(2250,980)"/>
     <wire from="(2270,940)" to="(2290,940)"/>
     <wire from="(230,890)" to="(230,920)"/>
