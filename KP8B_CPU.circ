@@ -1589,7 +1589,7 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="KP8B"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="downloadFrequency" val="1000000.0"/>
+    <a name="downloadFrequency" val="2.5E7"/>
     <a name="simulationFrequency" val="16.0"/>
     <boardmap boardname="TERASIC_DE1_SOC">
       <mc/>
