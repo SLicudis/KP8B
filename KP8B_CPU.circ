@@ -1259,8 +1259,12 @@
     <comp lib="3" loc="(900,770)" name="Comparator">
       <a name="mode" val="unsigned"/>
     </comp>
-    <comp loc="(1230,380)" name="BCDADDER"/>
-    <comp loc="(1230,520)" name="BCDSUBTRACTOR"/>
+    <comp loc="(1230,380)" name="BCDADDER">
+      <a name="label" val="BCDA"/>
+    </comp>
+    <comp loc="(1230,520)" name="BCDSUBTRACTOR">
+      <a name="label" val="BCDS"/>
+    </comp>
     <wire from="(1000,190)" to="(1000,420)"/>
     <wire from="(1000,190)" to="(1290,190)"/>
     <wire from="(1010,200)" to="(1010,460)"/>
@@ -1585,8 +1589,23 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="KP8B"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="downloadFrequency" val="255102.04081632654"/>
+    <a name="downloadFrequency" val="1000000.0"/>
     <a name="simulationFrequency" val="16.0"/>
+    <boardmap boardname="TERASIC_DE1_SOC">
+      <mc/>
+      <mc/>
+      <mc/>
+      <mc/>
+      <mc/>
+      <mc/>
+      <mc/>
+      <mc/>
+      <mc/>
+      <mc/>
+      <mc/>
+      <mc/>
+      <mc/>
+    </boardmap>
     <comp lib="0" loc="(1020,1210)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="IR"/>
