@@ -119,6 +119,7 @@
     <a name="appearance" val="custom"/>
     <a name="circuit" val="REG_BANK"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="downloadBoard" val="TERASIC_DE1_SOC"/>
     <a name="simulationFrequency" val="16.0"/>
     <appear>
       <rect height="4" stroke="none" width="10" x="50" y="58"/>
@@ -171,7 +172,6 @@
       <visible-register height="10" path="/Register(610,1430)" stroke-width="0" width="13" x="139" y="191"/>
       <visible-register height="10" path="/Register(610,1540)" stroke-width="0" width="13" x="161" y="191"/>
       <visible-register height="10" path="/Register(610,1650)" stroke-width="0" width="13" x="140" y="210"/>
-      <visible-register height="10" path="/Register(610,1760)" stroke-width="0" width="13" x="160" y="210"/>
       <visible-register height="10" path="/Status_REG(910,1280)/Register(440,670)" stroke-width="0" width="13" x="145" y="170"/>
       <visible-register height="10" path="/Status_REG(910,1280)/Register(440,800)" stroke-width="0" width="6" x="160" y="170"/>
       <circ-anchor facing="east" x="270" y="60"/>
@@ -272,6 +272,9 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="DIN"/>
       <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(520,1860)" name="Constant">
+      <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(610,1050)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -585,6 +588,7 @@
     <wire from="(510,190)" to="(510,590)"/>
     <wire from="(510,590)" to="(610,590)"/>
     <wire from="(520,180)" to="(520,480)"/>
+    <wire from="(520,1860)" to="(560,1860)"/>
     <wire from="(520,480)" to="(610,480)"/>
     <wire from="(530,170)" to="(530,370)"/>
     <wire from="(530,370)" to="(610,370)"/>
@@ -1202,7 +1206,7 @@
       <a name="label" val="Cenable"/>
       <a name="out_width" val="1"/>
       <a name="table">0001 1 # addc
-0010 1 # subc
+0011 1 # subc
 1111 1 # shrc
 </a>
     </comp>
@@ -1589,22 +1593,23 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="KP8B"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="downloadFrequency" val="2.5E7"/>
+    <a name="downloadBoard" val="TERASIC_DE1_SOC"/>
+    <a name="downloadFrequency" val="1000000.0"/>
     <a name="simulationFrequency" val="16.0"/>
     <boardmap boardname="TERASIC_DE1_SOC">
-      <mc/>
-      <mc/>
-      <mc/>
-      <mc/>
-      <mc/>
-      <mc/>
-      <mc/>
-      <mc/>
-      <mc/>
-      <mc/>
-      <mc/>
-      <mc/>
-      <mc/>
+      <mc key="/ADDR" pmap="585_130_0,585_130_1,585_130_2,585_130_3,585_130_4,585_130_5,585_130_6,585_130_7,585_130_8,585_130_9,585_130_10,585_130_11,585_130_12,585_130_13,585_130_14,585_130_15"/>
+      <mc key="/CLK" pmap="585_130_17"/>
+      <mc key="/CLKO" pmap="585_130_16"/>
+      <mc key="/DIN" pmap="585_130_18,585_130_19,585_130_20,585_130_21,585_130_22,585_130_23,585_130_24,585_130_25"/>
+      <mc key="/DOUT" pmap="662_132_0,662_132_1,662_132_2,662_132_3,662_132_4,662_132_5,662_132_6,662_132_7"/>
+      <mc key="/IIP" pmap="662_132_8"/>
+      <mc key="/INWAIT" pmap="662_132_9"/>
+      <mc key="/IRQ" pmap="662_132_10"/>
+      <mc key="/MRB" pmap="662_132_11"/>
+      <mc key="/NMI" pmap="662_132_12"/>
+      <mc key="/RDY" pmap="662_132_14"/>
+      <mc key="/RES" pmap="662_132_15"/>
+      <mc key="/R_W" pmap="662_132_13"/>
     </boardmap>
     <comp lib="0" loc="(1020,1210)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -2423,6 +2428,12 @@
       <a name="fanout" val="1"/>
       <a name="incoming" val="24"/>
     </comp>
+    <comp lib="0" loc="(380,720)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(390,800)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
     <comp lib="0" loc="(400,540)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="IR"/>
@@ -2432,6 +2443,12 @@
       <a name="appear" val="center"/>
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(400,840)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(400,920)" name="Constant">
+      <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(410,540)" name="Splitter">
       <a name="appear" val="center"/>
@@ -2474,6 +2491,9 @@
     <comp lib="0" loc="(510,870)" name="Tunnel">
       <a name="label" val="CLK"/>
     </comp>
+    <comp lib="0" loc="(530,660)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
     <comp lib="0" loc="(530,770)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Shift_IR"/>
@@ -2482,6 +2502,9 @@
       <a name="facing" val="east"/>
       <a name="label" val="Status"/>
       <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(610,560)" name="Constant">
+      <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(610,750)" name="Tunnel">
       <a name="label" val="RES"/>
@@ -2943,7 +2966,7 @@ x0001x111 00001110000000001000 # BRK
     <comp lib="4" loc="(560,630)" name="S-R Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="4" loc="(620,550)" name="S-R Flip-Flop">
+    <comp lib="4" loc="(630,550)" name="S-R Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
     <comp lib="4" loc="(800,900)" name="Counter">
@@ -3248,7 +3271,15 @@ x0001x111 00001110000000001000 # BRK
     <wire from="(370,900)" to="(380,900)"/>
     <wire from="(370,930)" to="(450,930)"/>
     <wire from="(380,700)" to="(400,700)"/>
+    <wire from="(380,720)" to="(410,720)"/>
+    <wire from="(390,800)" to="(410,800)"/>
     <wire from="(400,540)" to="(410,540)"/>
+    <wire from="(400,840)" to="(410,840)"/>
+    <wire from="(400,920)" to="(410,920)"/>
+    <wire from="(410,720)" to="(410,730)"/>
+    <wire from="(410,790)" to="(410,800)"/>
+    <wire from="(410,840)" to="(410,850)"/>
+    <wire from="(410,910)" to="(410,920)"/>
     <wire from="(420,680)" to="(450,680)"/>
     <wire from="(420,690)" to="(440,690)"/>
     <wire from="(420,700)" to="(440,700)"/>
@@ -3273,39 +3304,46 @@ x0001x111 00001110000000001000 # BRK
     <wire from="(480,700)" to="(580,700)"/>
     <wire from="(500,590)" to="(580,590)"/>
     <wire from="(500,870)" to="(510,870)"/>
-    <wire from="(510,540)" to="(600,540)"/>
+    <wire from="(510,540)" to="(590,540)"/>
+    <wire from="(530,660)" to="(540,660)"/>
     <wire from="(530,680)" to="(530,750)"/>
     <wire from="(530,680)" to="(550,680)"/>
     <wire from="(530,750)" to="(560,750)"/>
     <wire from="(530,770)" to="(550,770)"/>
+    <wire from="(540,640)" to="(540,660)"/>
+    <wire from="(540,640)" to="(550,640)"/>
+    <wire from="(540,660)" to="(550,660)"/>
     <wire from="(550,760)" to="(550,770)"/>
     <wire from="(550,760)" to="(560,760)"/>
     <wire from="(560,970)" to="(600,970)"/>
     <wire from="(580,530)" to="(580,590)"/>
-    <wire from="(580,530)" to="(640,530)"/>
+    <wire from="(580,530)" to="(650,530)"/>
     <wire from="(580,590)" to="(580,630)"/>
     <wire from="(580,690)" to="(580,700)"/>
+    <wire from="(590,540)" to="(590,620)"/>
+    <wire from="(590,620)" to="(650,620)"/>
     <wire from="(590,750)" to="(600,750)"/>
     <wire from="(600,1020)" to="(620,1020)"/>
-    <wire from="(600,540)" to="(600,620)"/>
-    <wire from="(600,620)" to="(640,620)"/>
     <wire from="(600,750)" to="(600,830)"/>
     <wire from="(600,750)" to="(610,750)"/>
     <wire from="(600,830)" to="(830,830)"/>
     <wire from="(600,970)" to="(600,1020)"/>
     <wire from="(600,970)" to="(650,970)"/>
+    <wire from="(610,560)" to="(620,560)"/>
     <wire from="(610,640)" to="(680,640)"/>
+    <wire from="(620,560)" to="(620,580)"/>
+    <wire from="(620,580)" to="(620,600)"/>
     <wire from="(640,1020)" to="(650,1020)"/>
-    <wire from="(640,530)" to="(640,550)"/>
-    <wire from="(640,610)" to="(640,620)"/>
     <wire from="(650,1020)" to="(650,1070)"/>
     <wire from="(650,1070)" to="(670,1070)"/>
+    <wire from="(650,530)" to="(650,550)"/>
+    <wire from="(650,610)" to="(650,620)"/>
     <wire from="(650,970)" to="(650,990)"/>
     <wire from="(650,990)" to="(670,990)"/>
     <wire from="(660,660)" to="(660,800)"/>
     <wire from="(660,660)" to="(680,660)"/>
     <wire from="(660,800)" to="(690,800)"/>
-    <wire from="(670,560)" to="(800,560)"/>
+    <wire from="(680,560)" to="(800,560)"/>
     <wire from="(690,1140)" to="(710,1140)"/>
     <wire from="(710,1110)" to="(710,1140)"/>
     <wire from="(710,650)" to="(720,650)"/>
